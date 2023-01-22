@@ -30,7 +30,7 @@ jobs:
         git config --global user.email "acautoclone@bot.com"
         git add .
         git commit -m "Added my codes from AtCoder"
-        git push origin main
+        git push -f origin main
         
     - name : Error Handling
       if : ${{steps.git_update.outcome == 'failure'}}
