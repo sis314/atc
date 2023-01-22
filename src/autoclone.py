@@ -94,10 +94,11 @@ class AutoClone(object):
             requests.get(submission_url).content, "html.parser"
         ).pre.string
 
+    #ファイルに書き込み
     @staticmethod
     def write_code(code, contest_id, problem_id, language) -> None:
         extension = AutoClone.get_extension(language)
-        path = f"../{contest_id}/{problem_id}.{extension}"
+        path = f"{contest_id}/{problem_id}.{extension}"
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", newline="") as f:
             f.write(code)
