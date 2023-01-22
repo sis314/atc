@@ -25,7 +25,7 @@ jobs:
       id : git_update
       continue-on-error: true
       run : |
-        git remote set-url origin  https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}   
+        git remote set-url origin  https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git   
         git config --global user.name "AutoCloneBot"
         git config --global user.email "acautoclone@bot.com"
         git add .
