@@ -5,7 +5,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
 
-CONFIG_PATH = "../config/config.yml"
+CONFIG_PATH = "config/config.yml"
 PROBLEMS_API_ENDPOINT = "https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions"
 EXTENSIONS = {
     "C++": "cpp",
