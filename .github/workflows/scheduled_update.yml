@@ -27,8 +27,8 @@ jobs:
       id : git_update
       continue-on-error: true
       run : |
-        git config user.name "sis314"
-        git config user.email "chroma31415@gmail.com"
+        git config --global user.name "sis314"
+        git config --global user.email "chroma31415@gmail.com"
         git add .
         git commit -m "Added codes from AtCoder"
         git pull
