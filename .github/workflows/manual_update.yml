@@ -26,8 +26,8 @@ jobs:
       continue-on-error: true
       run : |
         git remote set-url origin  https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}  
-        git config --global user.name "AutoCloneBot"
-        git config --global user.email "acautoclone@bot.com"
+        git config --global user.name "AutoClone"
+        git config --global user.email "chroma31415@gmail.com"
         git add .
         git commit -m "Added my codes from AtCoder"
         git push -f origin main
