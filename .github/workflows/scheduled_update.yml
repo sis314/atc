@@ -20,7 +20,7 @@ jobs:
     
     - name : Run AtCoder AutoClone
       run : |
-        python src/init_exec.py
+        python -B src/init_exec.py
         ls
     
     - name : Commit and Push
