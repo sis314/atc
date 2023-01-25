@@ -10,18 +10,29 @@ template<class T>bool chmin(T &a, const T &b) { if (b<a) { a = b; return 1; } re
 
 //-------------------------------------------------------------------------------------------------
 
-int N;
+int N,M;
 
 void _main(){
-    cin >> N;
-    int count = 0;
-    rep(i,1,N+1){
-        if(i%2 == 0)continue;
-        int cnt = 0;
-        rep(j,1,N+1){
-            if(i%j == 0)cnt++;
-        }
-        if(cnt == 8)count++;
+    ll max = 0;
+    cin >> N >> M;
+    int A[N][M];
+    rep(i,0,N){
+        rep(j,0,M) cin >> A[i][j];
     }
-    cout << count << endl;
+    rep(i,0,M-1){
+        ll ma = 0;
+        rep(j,i,M){
+            ll count = 0;
+            rep(k,0,N){
+                if(A[k][i] > A[k][j]){
+                    count = count + A[k][i];
+                }else{
+                    count = count + A[k][j];
+                }
+            }
+            if(count > ma) ma = count;
+        }
+        if(ma > max) max = ma;
+    }
+    cout << max << endl;
 }
